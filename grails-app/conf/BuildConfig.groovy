@@ -50,12 +50,14 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
+        runtime 'postgresql:postgresql:9.0-801.jdbc4'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
     }
 
     plugins {
         // plugins for the build system only
         build ":tomcat:7.0.55.2" // or ":tomcat:8.0.20"
+        compile ':db-reverse-engineer:0.5.1'
 
         // plugins for the compile step
         compile ":scaffolding:2.1.2"
@@ -63,7 +65,8 @@ grails.project.dependency.resolution = {
         compile ":asset-pipeline:2.1.5"
 
         // plugins needed at runtime but not for compilation
-        runtime ":hibernate4:4.3.8.1" // or ":hibernate:3.6.10.18"
+        // runtime ":hibernate4:4.3.8.1" // or
+        runtime ":hibernate:3.6.10.18"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
 

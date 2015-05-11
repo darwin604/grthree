@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list car">
 			
-				<g:if test="${carInstance?.color}">
+				<g:if test="${carInstance?.parkingSpotNumber}">
 				<li class="fieldcontain">
-					<span id="color-label" class="property-label"><g:message code="car.color.label" default="Color" /></span>
+					<span id="parkingSpotNumber-label" class="property-label"><g:message code="car.parkingSpotNumber.label" default="Parking Spot Number" /></span>
 					
-						<span class="property-value" aria-labelledby="color-label"><g:fieldValue bean="${carInstance}" field="color"/></span>
+						<span class="property-value" aria-labelledby="parkingSpotNumber-label"><g:fieldValue bean="${carInstance}" field="parkingSpotNumber"/></span>
 					
 				</li>
 				</g:if>
@@ -50,20 +50,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${carInstance?.price}">
-				<li class="fieldcontain">
-					<span id="price-label" class="property-label"><g:message code="car.price.label" default="Price" /></span>
-					
-						<span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${carInstance}" field="price"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${carInstance?.year}">
 				<li class="fieldcontain">
 					<span id="year-label" class="property-label"><g:message code="car.year.label" default="Year" /></span>
 					
-						<span class="property-value" aria-labelledby="year-label"><g:formatDate date="${carInstance?.year}" /></span>
+						<span class="property-value" aria-labelledby="year-label"><g:fieldValue bean="${carInstance}" field="year"/></span>
 					
 				</li>
 				</g:if>

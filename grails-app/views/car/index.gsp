@@ -24,13 +24,11 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="color" title="${message(code: 'car.color.label', default: 'Color')}" />
+						<g:sortableColumn property="parkingSpotNumber" title="${message(code: 'car.parkingSpotNumber.label', default: 'Parking Spot Number')}" />
 					
 						<g:sortableColumn property="make" title="${message(code: 'car.make.label', default: 'Make')}" />
 					
 						<g:sortableColumn property="model" title="${message(code: 'car.model.label', default: 'Model')}" />
-					
-						<g:sortableColumn property="price" title="${message(code: 'car.price.label', default: 'Price')}" />
 					
 						<g:sortableColumn property="year" title="${message(code: 'car.year.label', default: 'Year')}" />
 					
@@ -40,15 +38,13 @@
 				<g:each in="${carInstanceList}" status="i" var="carInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${carInstance.id}">${fieldValue(bean: carInstance, field: "color")}</g:link></td>
+						<td><g:link action="show" id="${carInstance.id}">${fieldValue(bean: carInstance, field: "parkingSpotNumber")}</g:link></td>
 					
 						<td>${fieldValue(bean: carInstance, field: "make")}</td>
 					
 						<td>${fieldValue(bean: carInstance, field: "model")}</td>
 					
-						<td>${fieldValue(bean: carInstance, field: "price")}</td>
-					
-						<td><g:formatDate date="${carInstance.year}" /></td>
+						<td>${fieldValue(bean: carInstance, field: "year")}</td>
 					
 					</tr>
 				</g:each>
